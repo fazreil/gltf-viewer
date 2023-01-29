@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.5/aframe/build/aframe-ar.js"></script>
+</head>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+      <a-assets>
+        <a-asset-item id="philly" src="../philly.gltf"></a-asset-item>
+      </a-assets>
+      <a-marker preset="hiro">
+          <a-entity gltf-model="#philly" rotation='0 0 0' position='-1.5 -1 -2' scale="0.1 0.1 0.1"></a-entity>
+          <!--
+                    <a-entity gltf-model="#philly" rotation='90 0 0' position='-1.5 -1 -2' scale="0.25 0.25 0.25"></a-entity>
+          -->
+      </a-marker>
+    </a-scene>
+  </body>
+</html>
